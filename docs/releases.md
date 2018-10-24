@@ -16,7 +16,7 @@ Examples:
 ### Release Process
 
 1. `git tag {version}` the version you wish to publish 
-1. `git push origin --tags` to start off the release build
+1. `git push --follow-tags` to start off the release build
 1. Wait a few minutes for the build to finish
 1. From your machine run this command: `npm run generate-release-notes`
 
