@@ -82,20 +82,12 @@ jobs:
         env:
           SOURCE: $(Build.SourcesDirectory)/git
           DESTINATION: $(Build.SourcesDirectory)/build/git
-        # TODO: figure out a way to unify these into a single task
       - task: CopyFiles@2
         inputs:
-          contents: "output/*.tar.gz"
-          targetFolder: $(Build.ArtifactStagingDirectory)
-          flattenFolders: true
-      - task: CopyFiles@2
-        inputs:
-          contents: "output/*.lzma"
-          targetFolder: $(Build.ArtifactStagingDirectory)
-          flattenFolders: true
-      - task: CopyFiles@2
-        inputs:
-          contents: "output/*.sha256"
+          contents: |
+            output/*.tar.gz
+            output/*.lzma
+            output/*.sha256
           targetFolder: $(Build.ArtifactStagingDirectory)
           flattenFolders: true
       - task: PublishBuildArtifacts@1
@@ -111,20 +103,12 @@ jobs:
         name: Build
       - bash: script/package.sh
         name: Package
-        # TODO: figure out a way to unify these into a single task
       - task: CopyFiles@2
         inputs:
-          contents: "output/*.tar.gz"
-          targetFolder: $(Build.ArtifactStagingDirectory)
-          flattenFolders: true
-      - task: CopyFiles@2
-        inputs:
-          contents: "output/*.lzma"
-          targetFolder: $(Build.ArtifactStagingDirectory)
-          flattenFolders: true
-      - task: CopyFiles@2
-        inputs:
-          contents: "output/*.sha256"
+          contents: |
+            output/*.tar.gz
+            output/*.lzma
+            output/*.sha256
           targetFolder: $(Build.ArtifactStagingDirectory)
           flattenFolders: true
       - task: PublishBuildArtifacts@1
@@ -144,20 +128,12 @@ jobs:
         name: Build
       - bash: script/package.sh
         name: Package
-        # TODO: figure out a way to unify these into a single task
       - task: CopyFiles@2
         inputs:
-          contents: "output/*.tar.gz"
-          targetFolder: $(Build.ArtifactStagingDirectory)
-          flattenFolders: true
-      - task: CopyFiles@2
-        inputs:
-          contents: "output/*.lzma"
-          targetFolder: $(Build.ArtifactStagingDirectory)
-          flattenFolders: true
-      - task: CopyFiles@2
-        inputs:
-          contents: "output/*.sha256"
+          contents: |
+            output/*.tar.gz
+            output/*.lzma
+            output/*.sha256
           targetFolder: $(Build.ArtifactStagingDirectory)
           flattenFolders: true
       - task: PublishBuildArtifacts@1
@@ -177,20 +153,12 @@ jobs:
         name: Build
       - bash: script/package.sh
         name: Package
-        # TODO: figure out a way to unify these into a single task
       - task: CopyFiles@2
         inputs:
-          contents: "output/*.tar.gz"
-          targetFolder: $(Build.ArtifactStagingDirectory)
-          flattenFolders: true
-      - task: CopyFiles@2
-        inputs:
-          contents: "output/*.lzma"
-          targetFolder: $(Build.ArtifactStagingDirectory)
-          flattenFolders: true
-      - task: CopyFiles@2
-        inputs:
-          contents: "output/*.sha256"
+          contents: |
+            output/*.tar.gz
+            output/*.lzma
+            output/*.sha256
           targetFolder: $(Build.ArtifactStagingDirectory)
           flattenFolders: true
       - task: PublishBuildArtifacts@1
